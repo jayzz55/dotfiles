@@ -1,0 +1,31 @@
+# Vim persistent undo files
+*.un~
+*.swp
+
+# Vim undodir
+vim/undodir
+
+# Local config
+*.local
+
+# zcompile'd files
+*.zwc
+*.zwc.old
+
+.netrwhist
+
+emacs-plugins/*
+!emacs-plugins/.gitkeep
+
+# Ignore Vim bundles
+vim/bundle/
+
+# Keep these folders...
+!vim/backups/.gitkeep
+!vim/undodir/.gitkeep
+# ...but not their contents
+vim/backups/*
+vim/undodir/*
+# Ignore the binary version because it will be automatically updated and
+# reloaded when words are added with `zg`
+vim/vim-spell-en.utf-8.add.spl

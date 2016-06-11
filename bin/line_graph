@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Create a simple line graph with gnuplot.
+#
+# The input is a file name.
+# The file should have one number per line.
+
+if ! command -v gnuplot > /dev/null; then
+  echo "You need to install gnuplot"
+  exit 1
+fi
+
+if [ $# -ge 1 -a -f "$1" ]; then
+  input="$1"
+else
+  echo "Usage: line_graph filename"
+  echo "The file should have one number per line."
+  exit 0
+fi
+
+read -r -d '' SCRIPT <<SCRIPT
+set terminal dumb;
+plot "$input" with lines title ''
+SCRIPT
+
+echo "$SCRIPT" | gnuplot

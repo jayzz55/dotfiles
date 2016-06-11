@@ -1,0 +1,26 @@
+" Vundle bundle
+Bundle 'gmarik/vundle'
+Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'neovimhaskell/haskell-vim'
+Bundle 'tmhedberg/matchit'
+Bundle 'vim-scripts/ruby-matchit'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'vim-airline/vim-airline'
+Bundle 'tpope/vim-bundler'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'tpope/vim-fugitive'
+Bundle 'pangloss/vim-javascript'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-surround'
+Bundle 'kana/vim-textobj-user'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
+" macro for matchit plugin
+runtime macros/matchit.vim
