@@ -1,6 +1,9 @@
 # The recommended way to use Heroku
 brew 'heroku-toolbelt'
 
+# lightweight and flexible command-line JSON processor.
+brew 'jq'
+
 # a better ack/grep
 brew 'the_silver_searcher'
 
