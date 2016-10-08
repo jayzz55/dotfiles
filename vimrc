@@ -27,6 +27,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-user'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'elmcast/elm-vim'
 
 " macro for matchit plugin
 runtime macros/matchit.vim
@@ -46,6 +47,7 @@ filetype plugin indent on
 autocmd vimenter * NERDTree
 nnoremap <leader>n :NERDTree ~/Documents/code<CR>
 map <leader>r :NERDTreeFind<cr>
+map <leader>m :ElmMake<cr>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 :set expandtab
 :set tabstop=2
@@ -58,3 +60,5 @@ set runtimepath^=~/.vim/bundle/ag
 set noswapfile
 syntax on
 filetype plugin indent on
+
+let g:elm_format_autosave = 1
