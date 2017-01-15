@@ -10,24 +10,33 @@ Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'vim-airline/vim-airline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'terryma/vim-multiple-cursors'
+" Haskell
 Bundle 'neovimhaskell/haskell-vim'
+" Elixr
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'slashmili/alchemist.vim'
+" Elm
+Bundle 'elmcast/elm-vim'
+" Js
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
+Bundle 'stephpy/vim-yaml'
+Bundle 'othree/yajs.vim'
+Bundle 'jelera/vim-javascript-syntax'
+" Ruby
 Bundle 'tmhedberg/matchit'
 Bundle 'vim-scripts/ruby-matchit'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'vim-airline/vim-airline'
-Bundle 'tpope/vim-bundler'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'tpope/vim-fugitive'
-Bundle 'pangloss/vim-javascript'
-Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rake'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-user'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'elmcast/elm-vim'
 
 " macro for matchit plugin
 runtime macros/matchit.vim
@@ -62,3 +71,5 @@ syntax on
 filetype plugin indent on
 
 let g:elm_format_autosave = 1
+let g:jsx_ext_required = 0
+let g:javascript_plugin_jsdoc = 1
