@@ -13,6 +13,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'vim-airline/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'tomtom/tcomment_vim'
 " Haskell
 Bundle 'neovimhaskell/haskell-vim'
 " Elixr
