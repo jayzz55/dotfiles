@@ -38,6 +38,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'kana/vim-textobj-user'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'itmammoth/run-rspec.vim'
+Bundle 't9md/vim-ruby-xmpfilter'
 
 " macro for matchit plugin
 runtime macros/matchit.vim
@@ -74,3 +76,19 @@ filetype plugin indent on
 let g:elm_format_autosave = 1
 let g:jsx_ext_required = 0
 let g:javascript_plugin_jsdoc = 1
+
+" run-rspec.vim Key Mappings
+nnoremap <leader>r :RunSpec<CR>
+nnoremap <leader>l :RunSpecLine<CR>
+nnoremap <leader>e :RunSpecLastRun<CR>
+nnoremap <leader>cr :RunSpecCloseResult<CR>
+
+" Ruby execution in Vim mapping
+:map <leader>rr :!ruby %<cr>
+
+nmap <leader>lr <Plug>(xmpfilter-run)
+xmap <leader>lr <Plug>(xmpfilter-run)
+imap <leader>lr <Plug>(xmpfilter-run)
+nmap <leader>lm <Plug>(xmpfilter-mark)
+xmap <leader>lm <Plug>(xmpfilter-mark)
+imap <leader>lm <Plug>(xmpfilter-mark)
