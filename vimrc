@@ -41,6 +41,9 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'itmammoth/run-rspec.vim'
 Bundle 't9md/vim-ruby-xmpfilter'
 
+" Misc
+Bundle 'junegunn/vim-easy-align'
+
 " macro for matchit plugin
 runtime macros/matchit.vim
 
@@ -77,13 +80,13 @@ let g:elm_format_autosave = 1
 let g:jsx_ext_required = 0
 let g:javascript_plugin_jsdoc = 1
 
-" run-rspec.vim Key Mappings
+" * run-rspec.vim Key Mappings
 nnoremap <leader>r :RunSpec<CR>
 nnoremap <leader>l :RunSpecLine<CR>
 nnoremap <leader>e :RunSpecLastRun<CR>
 nnoremap <leader>cr :RunSpecCloseResult<CR>
 
-" Ruby execution in Vim mapping
+" * Ruby execution in Vim mapping
 :map <leader>rr :!ruby %<cr>
 
 nmap <leader>lr <Plug>(xmpfilter-run)
@@ -92,3 +95,19 @@ imap <leader>lr <Plug>(xmpfilter-run)
 nmap <leader>lm <Plug>(xmpfilter-mark)
 xmap <leader>lm <Plug>(xmpfilter-mark)
 imap <leader>lm <Plug>(xmpfilter-mark)
+
+" * vim-easy-align mapping
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" try these commands:
+"   vipga=
+  "   visual-select inner paragraph
+  "   Start EasyAlign command (ga)
+  "   Align around =
+"   gaip=
+  "   Start EasyAlign command (ga) for inner paragraph
+  "   Align around =
