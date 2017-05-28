@@ -24,9 +24,9 @@ Bundle 'elmcast/elm-vim'
 " Js
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
-Bundle 'stephpy/vim-yaml'
-Bundle 'othree/yajs.vim'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'leshill/vim-json'
+Bundle 'stephpy/vim-yaml'
 " Ruby
 Bundle 'tmhedberg/matchit'
 Bundle 'vim-scripts/ruby-matchit'
