@@ -14,6 +14,8 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 " Haskell
 Bundle 'neovimhaskell/haskell-vim'
 " Elixr
@@ -95,6 +97,13 @@ imap <leader>lr <Plug>(xmpfilter-run)
 nmap <leader>lm <Plug>(xmpfilter-mark)
 xmap <leader>lm <Plug>(xmpfilter-mark)
 imap <leader>lm <Plug>(xmpfilter-mark)
+
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 " * vim-easy-align mapping
 " Start interactive EasyAlign in visual mode (e.g. vipga)
