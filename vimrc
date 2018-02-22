@@ -45,6 +45,8 @@ Bundle 't9md/vim-ruby-xmpfilter'
 
 " Misc
 Bundle 'junegunn/vim-easy-align'
+Bundle 'osyo-manga/vim-over'
+" Activate with :OverCommandLine
 
 " macro for matchit plugin
 runtime macros/matchit.vim
@@ -63,6 +65,7 @@ syntax on
 filetype plugin indent on
 autocmd vimenter * NERDTree
 nnoremap <leader>n :NERDTree ~/Documents/code<CR>
+map <leader>t :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr>
 map <leader>m :ElmMake<cr>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -98,6 +101,8 @@ nmap <leader>lm <Plug>(xmpfilter-mark)
 xmap <leader>lm <Plug>(xmpfilter-mark)
 imap <leader>lm <Plug>(xmpfilter-mark)
 
+" * run-rspec.vim Key Mappings
+nnoremap <leader>s :OverCommandLine<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
