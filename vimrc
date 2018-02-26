@@ -1,51 +1,58 @@
-" Vundle setup
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Vundle bundle
-Bundle 'gmarik/vundle'
-Bundle 'rking/ag.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'vim-airline/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/nerdtree
+call vundle#begin()
+
+" Mac OS X clipboard sharing
+set clipboard=unnamed
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Vim plugins
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " Haskell
-Bundle 'neovimhaskell/haskell-vim'
+Plugin 'neovimhaskell/haskell-vim'
 " Elixr
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'slashmili/alchemist.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
 " Elm
-Bundle 'elmcast/elm-vim'
+Plugin 'elmcast/elm-vim'
 " Js
-Bundle 'pangloss/vim-javascript'
-Bundle 'mxw/vim-jsx'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'leshill/vim-json'
-Bundle 'stephpy/vim-yaml'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'leshill/vim-json'
+Plugin 'stephpy/vim-yaml'
 " Ruby
-Bundle 'tmhedberg/matchit'
-Bundle 'vim-scripts/ruby-matchit'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rake'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-surround'
-Bundle 'kana/vim-textobj-user'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'itmammoth/run-rspec.vim'
-Bundle 't9md/vim-ruby-xmpfilter'
+Plugin 'tmhedberg/matchit'
+Plugin 'vim-scripts/ruby-matchit'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-surround'
+Plugin 'kana/vim-textobj-user'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'itmammoth/run-rspec.vim'
+Plugin 't9md/vim-ruby-xmpfilter'
 
 " Misc
-Bundle 'junegunn/vim-easy-align'
-Bundle 'osyo-manga/vim-over'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'osyo-manga/vim-over'
 " Activate with :OverCommandLine
 
 " macro for matchit plugin
@@ -57,9 +64,6 @@ if has("gui_running")
  colorscheme codeschool
  set guifont=Monaco:h12
 endif
-
-" execute pathogen#infect()
-" Helptags
 
 syntax on
 filetype plugin indent on
@@ -125,3 +129,4 @@ nmap ga <Plug>(EasyAlign)
 "   gaip=
   "   Start EasyAlign command (ga) for inner paragraph
   "   Align around =
+
