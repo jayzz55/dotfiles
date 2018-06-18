@@ -4,6 +4,12 @@ brew 'heroku-toolbelt'
 # lightweight and flexible command-line JSON processor.
 brew 'jq'
 
+# Postgresql
+brew 'postgresql'
+
+# Ansible
+brew 'ansible'
+
 # a better ack/grep
 brew 'the_silver_searcher'
 
@@ -17,6 +23,10 @@ brew 'macvim'
 
 # Used in Rails projects
 brew 'phantomjs'
+
+# python and python3
+brew 'python'
+brew 'python3'
 
 # Fast GitHub client
 brew 'hub'
@@ -36,15 +46,28 @@ tap 'homebrew/services'
 tap 'thoughtbot/formulae'
 brew 'rcm'
 
+# yarn
+brew 'yarn'
+
 # elixir
 brew 'elixir'
 brew 'erlang'
 
-# exercism
-brew 'exercism' 
+# scala
+brew 'sbt'
 
 # awscli
 brew 'awscli'
+
+# Graphicsmagick
+brew 'graphicsmagick'
+
+# watchman for js storybook watcher
+brew 'watchman'
+
+# openconnect
+brew 'openconnect'
+brew 'openssl'
 
 # Cask: install binaries
 tap 'caskroom/cask'
