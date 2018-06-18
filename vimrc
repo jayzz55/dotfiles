@@ -48,6 +48,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'itmammoth/run-rspec.vim'
 Plugin 't9md/vim-ruby-xmpfilter'
+" Html tag
+Plugin 'alvan/vim-closetag'
 
 " Misc
 Plugin 'junegunn/vim-easy-align'
@@ -106,6 +108,9 @@ imap <leader>lm <Plug>(xmpfilter-mark)
 
 " * run-rspec.vim Key Mappings
 nnoremap <leader>s :OverCommandLine<CR>
+
+" vim-closetag
+let g:closetag_filenames = "*.html,*.xhtml,*.js,*.erb,*.jsx"
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
