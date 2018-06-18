@@ -21,8 +21,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 " Haskell
 Plugin 'neovimhaskell/haskell-vim'
 " Elixr
@@ -33,6 +31,7 @@ Plugin 'elmcast/elm-vim'
 " Js
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'leshill/vim-json'
 Plugin 'stephpy/vim-yaml'
@@ -129,4 +128,8 @@ nmap ga <Plug>(EasyAlign)
 "   gaip=
   "   Start EasyAlign command (ga) for inner paragraph
   "   Align around =
+
+set backspace=indent,eol,start
+
+call vundle#end()
 
