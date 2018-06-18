@@ -16,17 +16,17 @@ brew 'the_silver_searcher'
 # so :Rtags works
 brew 'ctags'
 
-# It's vim
+# It's vim & neovim
 brew 'mercurial'
 brew 'vim'
-brew 'macvim'
+brew 'neovim'
 
 # Used in Rails projects
 brew 'phantomjs'
 
-# python and python3
-brew 'python'
-brew 'python3'
+# python version manager
+brew 'pyenv'
+brew 'pyenv-virtualenv'
 
 # Fast GitHub client
 brew 'hub'
