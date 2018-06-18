@@ -9,7 +9,7 @@ Jaya's dotfiles.
 
 ## Installation
 
-    $ git clone git@github.com:jayzz55/dotfiles.git ~/.dotfiles
+    $ git clone git@github.com:jayzz55/dotfiles.git ~/dotfiles
     $ cd ~/.dotfiles
     $ ./install.sh
 
