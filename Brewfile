@@ -71,8 +71,5 @@ brew 'openssl'
 
 # Cask: install binaries
 tap 'caskroom/cask'
-brew 'brew-cask'
 cask 'alfred'
 cask 'dropbox'
-cask 'google-chrome'
-cask 'vlc'
