@@ -10,7 +10,7 @@ Jaya's dotfiles.
 ## Installation
 
     $ git clone git@github.com:jayzz55/dotfiles.git ~/dotfiles
-    $ cd ~/.dotfiles
+    $ cd ~/dotfiles
     $ ./install.sh
 
 It will install [rcm] and use that to safely symlink the dotfiles, prompting you
