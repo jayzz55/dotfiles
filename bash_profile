@@ -58,3 +58,6 @@ function ssh_bastion() {
   echo 'You must had `authenticate` to `prod-developer`.'
   /Users/jaya.wijono/Documents/code/the-money/bastion/bin/ssh
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
