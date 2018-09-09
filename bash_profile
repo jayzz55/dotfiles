@@ -5,7 +5,7 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
 # source aws saml authenticate
-source $HOME/git/deployment/saml-aws-functions/bash-functions
+source $HOME/Documents/code/the-money/saml-aws-functions/bash-functions
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/

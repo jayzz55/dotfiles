@@ -14,7 +14,7 @@ brew link --force qt5
 echo "Finished installing Homebrew packages.. moving on.."
 
 echo "Installing Vundle.."
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/Vundle.vim
 
 echo "Linking dotfiles into ~..."
 # Before `rcup` runs, there is no ~/.rcrc, so we must tell `rcup` where to look.
