@@ -2,16 +2,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-if has('nvim')
-  let s:editor_root=expand("~/.config/nvim")
-  set rtp+=~/.config/nvim/bundle/Vundle.vim
-  set rtp+=~/.config/nvim/bundle/nerdtree
-  set rtp+=~/.config/nvim/bundle/deoplete.nvim
-else
-  let s:editor_root=expand("~/.vim")
-  set rtp+=~/.vim/bundle/Vundle.vim
-  set rtp+=~/.vim/bundle/nerdtree
-endif
+let s:editor_root=expand("~/.vim")
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/nerdtree
 
 call vundle#begin(s:editor_root . '/bundle')
 
@@ -64,21 +57,6 @@ Plugin 'alvan/vim-closetag'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'osyo-manga/vim-over'
 " Activate with :OverCommandLine
-
-" Install deoplete.nvim auto-complete
-if has('nvim')
-  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plugin 'Shougo/deoplete.nvim'
-  Plugin 'roxma/nvim-yarp'
-  Plugin 'roxma/vim-hug-neovim-rpc'
-endif
-
-" Setup python3 for deoplete.nvim auto-complete. See: https://github.com/tweekmonster/nvim-python-doctor/wiki/Advanced:-Using-pyenv
-" let g:python_host_prog = '${HOME}/.pyenv/versions/neovim2/bin/python'
-" let g:python3_host_prog = '${HOME}/.pyenv/versions/neovim3/bin/python'
-" Setup deoplete.nvim auto-complete
-let g:deoplete#enable_at_startup = 1
 
 " macro for matchit plugin
 runtime macros/matchit.vim
