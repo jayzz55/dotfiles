@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+:set nobomb
+
 " set the runtime path to include Vundle and initialize
 let s:editor_root=expand("~/.vim")
 set rtp+=~/.vim/bundle/Vundle.vim
