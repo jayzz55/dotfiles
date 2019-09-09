@@ -30,6 +30,9 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 echo "Installing bash-my-aws"
 git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
 
+echo "Installing Ruby..."
+curl -sSL https://get.rvm.io | bash -s stable --ruby
+
 echo
 echo "If you like what you see in system/osx-settings, run ./system/osx-settings"
 echo "If you're using Terminal.app, check out the terminal-themes directory"
