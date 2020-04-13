@@ -22,7 +22,6 @@ brew 'vim'
 brew 'neovim'
 
 # Used in Rails projects
-brew 'phantomjs'
 
 # python version manager
 brew 'pyenv'
@@ -63,7 +62,7 @@ brew 'awscli'
 brew 'graphicsmagick'
 
 # watchman for js storybook watcher
-brew 'watchman'
+# brew 'watchman'
 
 # openconnect
 brew 'openconnect'
@@ -71,5 +70,3 @@ brew 'openssl'
 
 # Cask: install binaries
 tap 'caskroom/cask'
-cask 'alfred'
-cask 'dropbox'
