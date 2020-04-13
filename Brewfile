@@ -1,6 +1,12 @@
 # The recommended way to use Heroku
 brew 'heroku-toolbelt'
 
+# zsh
+brew 'zsh'
+
+# autojump for zsh plugins
+brew 'autojump'
+
 # lightweight and flexible command-line JSON processor.
 brew 'jq'
 
