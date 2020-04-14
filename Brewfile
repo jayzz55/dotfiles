@@ -54,6 +54,10 @@ brew 'rcm'
 # yarn
 brew 'yarn'
 
+# ruby
+brew 'ruby-install'
+brew 'chruby'
+
 # elixir
 brew 'elixir'
 brew 'erlang'

@@ -1,8 +1,11 @@
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" 
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+# Load chruby
+if [ -e /usr/local/share/chruby/chruby.sh ]; then
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
+fi
 
 # source aws saml authenticate
 source $HOME/Documents/code/the-money/saml-aws-functions/bash-functions
