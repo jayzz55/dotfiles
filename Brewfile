@@ -91,4 +91,7 @@ brew 'rg'
 brew 'hub'
 # Fuzzy finder
 brew 'fzf'
-
+# HTTPie - a better curl
+brew 'httpie'
+# tig -  a command line visual interface for git
+brew 'tig'
