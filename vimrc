@@ -17,7 +17,7 @@ set clipboard=unnamed
 Plugin 'VundleVim/Vundle.vim'
 
 " Vim plugins
-Plugin 'rking/ag.vim'
+Plugin 'jremmen/vim-ripgrep'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'

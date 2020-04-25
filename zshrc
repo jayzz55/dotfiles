@@ -137,3 +137,8 @@ function idp {
   export $(rea-as saml | pecorb | xargs rea-as saml) > /dev/null
   echo "Role: ${AWS_ROLE-(not set)}"
 }
+
+# replace standard ls with exa (https://the.exa.website/)
+alias ls="exa"
+# replace standard cat with bat (https://github.com/sharkdp/bat)
+alias cat="bat"

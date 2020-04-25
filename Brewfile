@@ -1,9 +1,11 @@
+# Cask: install binaries
+tap 'caskroom/cask'
+
 # The recommended way to use Heroku
 brew 'heroku-toolbelt'
 
 # zsh
 brew 'zsh'
-
 # autojump for zsh plugins
 brew 'autojump'
 
@@ -15,9 +17,6 @@ brew 'postgresql'
 
 # Ansible
 brew 'ansible'
-
-# a better ack/grep
-brew 'the_silver_searcher'
 
 # so :Rtags works
 brew 'ctags'
@@ -32,12 +31,6 @@ brew 'neovim'
 # python version manager
 brew 'pyenv'
 brew 'pyenv-virtualenv'
-
-# Fast GitHub client
-brew 'hub'
-
-# Fuzzy finder
-brew 'fzf'
 
 # Docker stuffs
 brew 'docker'
@@ -78,5 +71,24 @@ brew 'graphicsmagick'
 brew 'openconnect'
 brew 'openssl'
 
-# Cask: install binaries
-tap 'caskroom/cask'
+# dive
+brew 'dive'
+
+# stuffs recommended in: https://blog.testdouble.com/posts/2020-04-07-favorite-things/
+# tldr - a better man
+brew 'tldr'
+# ngrok
+cask 'ngrock'
+# exa - a better ls
+brew 'exa'
+# bat - a better cat
+brew 'bat'
+# grc - a slick tool for colorizing log output
+brew 'grc'
+# rg - ripgrep for fast search
+brew 'rg'
+# hub
+brew 'hub'
+# Fuzzy finder
+brew 'fzf'
+
