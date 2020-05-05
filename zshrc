@@ -98,15 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Load chruby
-if [ -e /usr/local/share/chruby/chruby.sh ]; then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-fi
-
-export NVM_DIR="/Users/jaya.wijono/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 eval $(thefuck --alias please) # Enable theFuck
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -142,3 +133,6 @@ function idp {
 alias ls="exa"
 # replace standard cat with bat (https://github.com/sharkdp/bat)
 alias cat="bat"
+
+# Asdf version manager
+. $(brew --prefix asdf)/asdf.sh

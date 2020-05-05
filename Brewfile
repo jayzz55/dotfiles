@@ -47,9 +47,10 @@ brew 'rcm'
 # yarn
 brew 'yarn'
 
-# ruby
-brew 'ruby-install'
-brew 'chruby'
+# asdf version manager
+brew 'asdf'
+# required to install nodejs via asdf
+brew 'gpg'
 
 # elixir
 brew 'elixir'

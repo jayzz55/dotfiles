@@ -23,15 +23,14 @@ RCRC=rcrc rcup -v
 echo "Installing Vim packages..."
 vim +PlugInstall +qa
 
-# echo "Installing Bash_it..."
-# git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
-# ~/.bash_it/install.sh
-
 echo "Installing Zsh Plugins..."
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 chmod 700 ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# asdf permission
+chmod 700 $(brew --prefix asdf)/asdf.sh/
 
 echo "Change the default shell to Zsh..."
 chsh -s /bin/zsh
