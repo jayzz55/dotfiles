@@ -2,7 +2,7 @@
 tap 'caskroom/cask'
 
 # The recommended way to use Heroku
-brew 'heroku-toolbelt'
+# brew 'heroku-toolbelt'
 
 # zsh
 brew 'zsh'
@@ -45,7 +45,7 @@ tap 'thoughtbot/formulae'
 brew 'rcm'
 
 # yarn
-brew 'yarn'
+# brew 'yarn'
 
 # asdf version manager
 brew 'asdf'
