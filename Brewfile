@@ -75,6 +75,9 @@ brew 'openssl'
 # dive
 brew 'dive'
 
+# aws-vault
+cask 'aws-vault'
+
 # stuffs recommended in: https://blog.testdouble.com/posts/2020-04-07-favorite-things/
 # tldr - a better man
 brew 'tldr'
