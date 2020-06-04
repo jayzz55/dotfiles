@@ -30,6 +30,10 @@ Plugin 'neovimhaskell/haskell-vim'
 " Elixr
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
+" See https://github.com/Shougo/deoplete.nvim#requirements
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 " Elm
 Plugin 'elmcast/elm-vim'
 " Js
@@ -121,6 +125,13 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+
+
+" start deoplete at startup.
+if !has('nvim') " Vim 8 only
+  pythonx import pynvim
+endif
+let g:deoplete#enable_at_startup = 1
 
 " * vim-easy-align mapping
 " Start interactive EasyAlign in visual mode (e.g. vipga)
