@@ -25,8 +25,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tcomment_vim'
+
 " Haskell
 Plugin 'neovimhaskell/haskell-vim'
+
 " Elixr
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
@@ -34,15 +36,19 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " Elm
 Plugin 'elmcast/elm-vim'
+
 " Js
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'leshill/vim-json'
 Plugin 'stephpy/vim-yaml'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'jparise/vim-graphql'
+
 " Ruby
 Plugin 'tmhedberg/matchit'
 Plugin 'vim-scripts/ruby-matchit'
