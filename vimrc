@@ -8,66 +8,66 @@ let s:editor_root=expand("~/.vim")
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/nerdtree
 
-call vundle#begin(s:editor_root . '/bundle')
+call plug#begin(s:editor_root . '/bundle')
 
 " Mac OS X clipboard sharing
 set clipboard=unnamed
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
 " Vim plugins
-Plugin 'jremmen/vim-ripgrep'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tomtom/tcomment_vim'
+Plug 'jremmen/vim-ripgrep'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tcomment_vim'
 
 " Haskell
-Plugin 'neovimhaskell/haskell-vim'
+Plug 'neovimhaskell/haskell-vim'
 
 " Elixr
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'slashmili/alchemist.vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 " See https://github.com/Shougo/deoplete.nvim#requirements
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Elm
-Plugin 'elmcast/elm-vim'
+Plug 'elmcast/elm-vim'
 
 " Js
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'leshill/vim-json'
-Plugin 'stephpy/vim-yaml'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'jparise/vim-graphql'
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'leshill/vim-json'
+Plug 'stephpy/vim-yaml'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jparise/vim-graphql'
 
 " Ruby
-Plugin 'tmhedberg/matchit'
-Plugin 'vim-scripts/ruby-matchit'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rake'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-surround'
-Plugin 'kana/vim-textobj-user'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'itmammoth/run-rspec.vim'
-Plugin 't9md/vim-ruby-xmpfilter'
+Plug 'tmhedberg/matchit'
+Plug 'vim-scripts/ruby-matchit'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rake'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-surround'
+Plug 'kana/vim-textobj-user'
+Plug 'tpope/vim-unimpaired'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'itmammoth/run-rspec.vim'
+Plug 't9md/vim-ruby-xmpfilter'
 " Html tag
-Plugin 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 
 " Misc
-Plugin 'junegunn/vim-easy-align'
-Plugin 'osyo-manga/vim-over'
+Plug 'junegunn/vim-easy-align'
+Plug 'osyo-manga/vim-over'
 " Activate with :OverCommandLine
 
 " macro for matchit plugin
@@ -164,5 +164,5 @@ nmap ga <Plug>(EasyAlign)
 
 set backspace=indent,eol,start
 
-call vundle#end()
+call plug#end()
 
