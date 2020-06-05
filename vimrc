@@ -32,10 +32,7 @@ Plug 'neovimhaskell/haskell-vim'
 " Elixr
 Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
-" See https://github.com/Shougo/deoplete.nvim#requirements
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
 " Elm
 Plug 'elmcast/elm-vim'
@@ -133,22 +130,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
-
-" start deoplete at startup.
-" If having issues, debug the python3 path with:
-" :pythonx import sys; print(sys.path)
-" Then install pynvim with the pyton use by this vim:
-" PATH="/usr/local/opt/python@3.8/bin:$PATH" pip3 install pynvim
-" See: https://github.com/roxma/vim-hug-neovim-rpc/issues/47
-
-if !has('nvim') " Vim 8 only
-  pythonx import pynvim
-endif
-
-let g:deoplete#enable_at_startup = 1
-
 " add ts-server in coc
-let g:coc_global_extensions = [ 'coc-tsserver' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-elixir' ]
 
 " * vim-easy-align mapping
 " Start interactive EasyAlign in visual mode (e.g. vipga)

@@ -65,12 +65,12 @@ brew 'awscli'
 # Graphicsmagick
 brew 'graphicsmagick'
 
-# watchman for js storybook watcher
-# brew 'watchman'
-
 # openconnect
 brew 'openconnect'
 brew 'openssl'
+
+# watchman
+brew 'watchman'
 
 # dive
 brew 'dive'
