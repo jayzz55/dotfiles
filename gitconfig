@@ -22,7 +22,7 @@
 	templatedir = ~/.git_template
 [core]
 	excludesfile = /Users/jaya.wijono/.gitignore
-	editor = /usr/bin/vim
+	editor = vim
 [http]
 	sslVerify = true
 

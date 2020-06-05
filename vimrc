@@ -31,9 +31,9 @@ Plugin 'neovimhaskell/haskell-vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 " See https://github.com/Shougo/deoplete.nvim#requirements
-Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Elm
 Plugin 'elmcast/elm-vim'
 " Js
@@ -128,9 +128,16 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 " start deoplete at startup.
+" If having issues, debug the python3 path with:
+" :pythonx import sys; print(sys.path)
+" Then install pynvim with the pyton use by this vim:
+" PATH="/usr/local/opt/python@3.8/bin:$PATH" pip3 install pynvim
+" See: https://github.com/roxma/vim-hug-neovim-rpc/issues/47
+
 if !has('nvim') " Vim 8 only
   pythonx import pynvim
 endif
+
 let g:deoplete#enable_at_startup = 1
 
 " * vim-easy-align mapping
