@@ -48,6 +48,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Ruby
 Plug 'tmhedberg/matchit'
@@ -145,6 +146,9 @@ if !has('nvim') " Vim 8 only
 endif
 
 let g:deoplete#enable_at_startup = 1
+
+" add ts-server in coc
+let g:coc_global_extensions = [ 'coc-tsserver' ]
 
 " * vim-easy-align mapping
 " Start interactive EasyAlign in visual mode (e.g. vipga)
