@@ -58,9 +58,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Load thefuck
-eval $(thefuck --alias)
-
 function ssh_bastion() {
   echo 'You must had `authenticate` to `prod-developer`.'
   /Users/jaya.wijono/Documents/code/the-money/bastion/bin/ssh

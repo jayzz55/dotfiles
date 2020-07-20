@@ -99,7 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval $(thefuck --alias please) # Enable theFuck
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
@@ -113,9 +112,6 @@ export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
 if [ -d "$GHC_DOT_APP" ]; then
     export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
-
-# Load thefuck
-eval $(thefuck --alias)
 
 function ssh_bastion() {
   echo 'You must had `authenticate` to `prod-developer`.'
