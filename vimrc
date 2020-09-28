@@ -19,7 +19,7 @@ Plug 'VundleVim/Vundle.vim'
 " Vim plugins
 Plug 'jremmen/vim-ripgrep'
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
