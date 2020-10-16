@@ -38,9 +38,6 @@ chsh -s /bin/zsh
 echo "Installing bash-my-aws"
 git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
 
-echo "Installing Ruby..."
-ruby-install --latest ruby
-
 echo
 echo "If you like what you see in system/osx-settings, run ./system/osx-settings"
 echo "If you're using Terminal.app, check out the terminal-themes directory"
