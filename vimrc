@@ -8,6 +8,12 @@ let s:editor_root=expand("~/.vim")
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/nerdtree
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin(s:editor_root . '/bundle')
 
 " Mac OS X clipboard sharing
