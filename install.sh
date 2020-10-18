@@ -38,6 +38,9 @@ chsh -s /bin/zsh
 echo "Installing bash-my-aws"
 git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
 
+echo "Install iTerm fonts"
+brew tap homebrew/cask-fonts && brew cask install homebrew/cask-fonts/font-source-code-pro
+
 echo
 echo "If you like what you see in system/osx-settings, run ./system/osx-settings"
 echo "If you're using Terminal.app, check out the terminal-themes directory"
