@@ -20,6 +20,9 @@ RCRC=rcrc rcup -v
 echo "Installing Vim packages..."
 vim +PlugInstall +qa
 
+echo "install Oh my Zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 echo "Installing Zsh Plugins..."
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
