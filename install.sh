@@ -11,9 +11,6 @@ for brewfile in Brewfile; do
 done
 echo "Finished installing Homebrew packages.. moving on.."
 
-echo "Installing Vundle.."
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/Vundle.vim
-
 echo "Linking dotfiles into ~..."
 # Before `rcup` runs, there is no ~/.rcrc, so we must tell `rcup` where to look.
 # We need the rcrc because it tells `rcup` to ignore thousands of useless Vim
@@ -30,13 +27,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 chmod 700 ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # asdf permission
-chmod 700 $(brew --prefix asdf)/asdf.sh/
+chmod 700 $(brew --prefix asdf)/asdf.sh
 
 echo "Change the default shell to Zsh..."
 chsh -s /bin/zsh
 
-echo "Installing bash-my-aws"
-git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
+# echo "Installing bash-my-aws"
+# git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
 
 echo
 echo "If you like what you see in system/osx-settings, run ./system/osx-settings"
