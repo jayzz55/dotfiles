@@ -35,8 +35,8 @@ chmod 700 $(brew --prefix asdf)/asdf.sh
 echo "Change the default shell to Zsh..."
 chsh -s /bin/zsh
 
-# echo "Installing bash-my-aws"
-# git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
+echo "Installing bash-my-aws"
+git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
 
 echo
 echo "If you like what you see in system/osx-settings, run ./system/osx-settings"

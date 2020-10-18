@@ -104,20 +104,20 @@ source $ZSH/oh-my-zsh.sh
 
 
 # source aws saml authenticate
-source $HOME/Documents/code/the-money/saml-aws-functions/bash-functions
-source $HOME/.ghcup/env
-export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
+# source $HOME/Documents/code/the-money/saml-aws-functions/bash-functions
+# source $HOME/.ghcup/env
+# export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
+
+# function ssh_bastion() {
+#   echo 'You must had `authenticate` to `prod-developer`.'
+#   /Users/jaya.wijono/Documents/code/the-money/bastion/bin/ssh
+# }
 
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
 if [ -d "$GHC_DOT_APP" ]; then
     export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
-
-function ssh_bastion() {
-  echo 'You must had `authenticate` to `prod-developer`.'
-  /Users/jaya.wijono/Documents/code/the-money/bastion/bin/ssh
-}
 
 # This function require these 2:
 # https://git.realestate.com.au/cowbell/rea-as
