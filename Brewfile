@@ -1,5 +1,5 @@
 # Cask: install binaries
-tap 'caskroom/cask'
+tap 'homebrew/cask-versions'
 
 # The recommended way to use Heroku
 # brew 'heroku-toolbelt'
@@ -82,7 +82,7 @@ cask 'aws-vault'
 # tldr - a better man
 brew 'tldr'
 # ngrok
-cask 'ngrock'
+#cask 'ngrock'
 # exa - a better ls
 brew 'exa'
 # bat - a better cat
