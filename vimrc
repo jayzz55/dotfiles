@@ -6,7 +6,8 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 let s:editor_root=expand("~/.vim")
 set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/bundle/nerdtree
+" set rtp+=~/.vim/bundle/nerdtree
+set nofoldenable    " disable folding
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -24,7 +25,7 @@ Plug 'VundleVim/Vundle.vim'
 
 " Vim plugins
 Plug 'jremmen/vim-ripgrep'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
@@ -32,11 +33,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
 
-" Haskell
-Plug 'neovimhaskell/haskell-vim'
+" Syntax Highlighter
+Plug 'sheerun/vim-polyglot'
 
 " Elixr
-Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 Plug 'slashmili/alchemist.vim'
 Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
@@ -87,10 +89,11 @@ endif
 syntax on
 filetype plugin indent on
 autocmd vimenter * NERDTree
-nnoremap <leader>n :NERDTree ~/Documents/code<CR>
+" nnoremap <leader>n :NERDTree ~/Documents/code<CR>
 map <leader>t :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr>
-map <leader>m :ElmMake<cr>
+" map <leader>m :ElmMake<cr>
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 :set expandtab
 :set tabstop=2
@@ -138,6 +141,12 @@ let g:UltiSnipsEditSplit="vertical"
 
 " add ts-server in coc
 let g:coc_global_extensions = [ 'coc-tsserver', 'coc-elixir' ]
+
+" automatically format elixir code on save
+let g:mix_format_on_save = 1
+
+" enable python syntax highlighting
+let g:python_highlight_all = 1
 
 " * vim-easy-align mapping
 " Start interactive EasyAlign in visual mode (e.g. vipga)

@@ -131,3 +131,12 @@ alias cat="bat"
 
 # Asdf version manager
 . $(brew --prefix asdf)/asdf.sh
+
+# Certsy related stuffs
+## Certsy aws auth saml
+function awsauth { /Users/jwijono/Documents/code/certsy/aws-auth-bash/auth.sh "$@"; [[ -r "$HOME/.aws/sessiontoken" ]] && . "$HOME/.aws/sessiontoken"; }
+export -f awsauth
+
+## Certsy adhoc function
+function adhoc { awsauth && aws ssm start-session --target `aws ec2 describe-instances --filters Name=tag:Name,Values='adhoc*' --query 'Reservations[*].Instances[*].InstanceId' --output text` }
+export adhoc

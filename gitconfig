@@ -1,10 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-#	name = Jaya Wijono
-#	email = jaya.wijono@vic017069m.win.int.realestate.com.au
-[user]
-	email = jaya.wijono@realestate.com.au
+	email = jwijono@seek.com.au
 	name = Jaya Wijono
 [push]
 	default = simple
