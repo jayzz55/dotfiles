@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-	email = jwijono@seek.com.au
+	email = jayzzwijono@yahoo.com
 	name = Jaya Wijono
 [push]
 	default = simple
@@ -66,3 +66,4 @@
 
 [merge]
     tool = vimdiff
+[url "ssh://git@github.com/"]

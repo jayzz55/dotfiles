@@ -2,13 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jwijono/.oh-my-zsh"
+export ZSH="/Users/jaya.wijono/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula-pro"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +69,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git autojump zsh-autosuggestions zsh-syntax-highlighting asdf)
 
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
@@ -130,13 +131,42 @@ alias ls="exa"
 alias cat="bat"
 
 # Asdf version manager
-. $(brew --prefix asdf)/asdf.sh
+. "/usr/local/opt/asdf/libexec/asdf.sh"
 
-# Certsy related stuffs
-## Certsy aws auth saml
-function awsauth { /Users/jwijono/Documents/code/certsy/aws-auth-bash/auth.sh "$@"; [[ -r "$HOME/.aws/sessiontoken" ]] && . "$HOME/.aws/sessiontoken"; }
-export -f awsauth
 
-## Certsy adhoc function
-function adhoc { awsauth && aws ssm start-session --target `aws ec2 describe-instances --filters Name=tag:Name,Values='adhoc*' --query 'Reservations[*].Instances[*].InstanceId' --output text` }
-export adhoc
+# BEGIN SHORTCUT for running zendesk aws stuffs
+# ie: ap sandbox1 aws sts get-caller-identity
+function ap(){
+ profile=$1
+ aws-login $profile
+ shift
+ AWS_PROFILE=$profile $@
+}
+# END SHORTCUT for running zendesk aws stuffs
+#
+# BEGIN aws-exec
+source ~/Code/zendesk/dotfiles_n_scripts/shell_scripts/aws-exec.bash
+# END aws-exec
+
+# The next line updates PATH for the Google Cloud SDK.
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+
+# The next line enables zsh completion for gcloud.
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+# setup kubectl okta helper for zendesk - https://github.com/zendesk/kubectl_config
+source ~/Code/zendesk/kubectl_config/dotfiles/kubectl_stuff.bash
+
+# setup GO Workspace
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig/:$PKG_CONFIG_PATH"
+
+# setup aliases for kubectl
+function k() { kubectl "${@:2}" --context "$1"; }
+function ka() { kubectl "${@:2}" --as admin --as-group system:masters --context "$1"; }
+alias s="stern --context"
+# BEGIN ZDI
+export DOCKER_FOR_MAC_ENABLED=true
+source /Users/jaya.wijono/Code/zendesk/zdi/dockmaster/zdi.sh
+# END ZDI

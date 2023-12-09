@@ -58,11 +58,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-function ssh_bastion() {
-  echo 'You must had `authenticate` to `prod-developer`.'
-  /Users/jaya.wijono/Documents/code/the-money/bastion/bin/ssh
-}
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -98,3 +93,9 @@ function idp {
   export $(rea-as saml | pecorb | xargs rea-as saml) > /dev/null
   echo "Role: ${AWS_ROLE-(not set)}"
 }
+# BEGIN ZDI
+export DOCKER_FOR_MAC_ENABLED=true
+source /Users/jaya.wijono/Code/zendesk/zdi/dockmaster/zdi.sh
+# END ZDI
+
+. "/usr/local/opt/asdf/libexec/asdf.sh"
