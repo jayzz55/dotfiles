@@ -28,10 +28,6 @@ brew 'neovim'
 
 # Used in Rails projects
 
-# python version manager
-brew 'pyenv'
-brew 'pyenv-virtualenv'
-
 # Docker stuffs
 brew 'docker'
 brew 'docker-machine'
@@ -44,26 +40,18 @@ tap 'homebrew/services'
 tap 'thoughtbot/formulae'
 brew 'rcm'
 
-# yarn
-# brew 'yarn'
-
 # asdf version manager
 brew 'asdf'
+
 # required to install nodejs via asdf
 brew 'gpg'
 
 # elixir
-brew 'elixir'
-brew 'erlang'
 
 # scala
-brew 'sbt'
 
 # awscli
 brew 'awscli'
-
-# Graphicsmagick
-brew 'graphicsmagick'
 
 # openconnect
 brew 'openconnect'
