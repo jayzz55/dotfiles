@@ -93,9 +93,9 @@ function idp {
   export $(rea-as saml | pecorb | xargs rea-as saml) > /dev/null
   echo "Role: ${AWS_ROLE-(not set)}"
 }
+
+. "/usr/local/opt/asdf/libexec/asdf.sh"
 # BEGIN ZDI
 export DOCKER_FOR_MAC_ENABLED=true
 source /Users/jaya.wijono/Code/zendesk/zdi/dockmaster/zdi.sh
 # END ZDI
-
-. "/usr/local/opt/asdf/libexec/asdf.sh"
