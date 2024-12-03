@@ -86,14 +86,6 @@ export NVM_DIR="$HOME/.nvm"
 # Uncomment this to make Bash-it create alias reload.
 # export BASH_IT_RELOAD_LEGACY=1
 
-# This function require these 2:
-# https://git.realestate.com.au/cowbell/rea-as
-# https://github.com/stevenocchipinti/pecorb
-function idp {
-  export $(rea-as saml | pecorb | xargs rea-as saml) > /dev/null
-  echo "Role: ${AWS_ROLE-(not set)}"
-}
-
 . "/usr/local/opt/asdf/libexec/asdf.sh"
 # BEGIN ZDI
 export DOCKER_FOR_MAC_ENABLED=true

@@ -135,29 +135,6 @@ alias cat="bat"
 . "/usr/local/opt/asdf/libexec/asdf.sh"
 
 
-# BEGIN SHORTCUT for running zendesk aws stuffs
-# ie: ap sandbox1 aws sts get-caller-identity
-function ap(){
- profile=$1
- aws-login $profile
- shift
- AWS_PROFILE=$profile $@
-}
-# END SHORTCUT for running zendesk aws stuffs
-#
-# BEGIN aws-exec
-source ~/Code/zendesk/dotfiles_n_scripts/shell_scripts/aws-exec.bash
-# END aws-exec
-
-# The next line updates PATH for the Google Cloud SDK.
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-
-# The next line enables zsh completion for gcloud.
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-# setup kubectl okta helper for zendesk - https://github.com/zendesk/kubectl_config
-source ~/Code/zendesk/kubectl_config/dotfiles/kubectl_stuff.bash
-
 # setup GO Workspace
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -167,7 +144,18 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig/:$PKG_CONFIG_PATH"
 function k() { kubectl "${@:2}" --context "$1"; }
 function ka() { kubectl "${@:2}" --as admin --as-group system:masters --context "$1"; }
 alias s="stern --context"
-# BEGIN ZDI
-export DOCKER_FOR_MAC_ENABLED=true
-source /Users/jaya.wijono/Code/zendesk/zdi/dockmaster/zdi.sh
-# END ZDI
+
+# BEGIN alias for kubectl
+function k() { if [[ $2 = -* ]]; then kubectl --context "$1" "${@:2}"; else kubectl "$2" --context "$1" "${@:3}"; fi; }
+function ka() { if [[ $2 = -* ]]; then kubectl --as admin --as-group system:masters --context "$1" "${@:2}"; else kubectl "$2" --as admin --as-group system:masters --context "$1" "${@:3}"; fi; }
+alias s="stern --context"
+# END
+
+# bun completions
+[ -s "/Users/jaya.wijono/.bun/_bun" ] && source "/Users/jaya.wijono/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias python="python3"
