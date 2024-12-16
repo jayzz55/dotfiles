@@ -132,8 +132,7 @@ alias ls="eza"
 alias cat="bat"
 
 # Asdf version manager
-. "/usr/local/opt/asdf/libexec/asdf.sh"
-
+# . "/opt/homebrew/opt/asdf/libexec/bin/asdf"
 
 # setup GO Workspace
 export GOPATH=$HOME/go
