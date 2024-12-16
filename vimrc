@@ -165,13 +165,12 @@ nmap ga <Plug>(EasyAlign)
   "   Align around =
 
 " Dracula Pro theme:
-packadd! dracula_pro
+" packadd! dracula_pro
 
 syntax enable
 
-let g:dracula_colorterm = 0
-
-colorscheme dracula_pro
+" let g:dracula_colorterm = 0
+" colorscheme dracula_pro
 
 set backspace=indent,eol,start
 
