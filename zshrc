@@ -149,12 +149,5 @@ function k() { if [[ $2 = -* ]]; then kubectl --context "$1" "${@:2}"; else kube
 function ka() { if [[ $2 = -* ]]; then kubectl --as admin --as-group system:masters --context "$1" "${@:2}"; else kubectl "$2" --as admin --as-group system:masters --context "$1" "${@:3}"; fi; }
 alias s="stern --context"
 # END
-
-# bun completions
-[ -s "/Users/jaya.wijono/.bun/_bun" ] && source "/Users/jaya.wijono/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
+#
 alias python="python3"
