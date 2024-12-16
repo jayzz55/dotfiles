@@ -30,7 +30,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 chmod 700 ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # asdf permission
-chmod 700 $(brew --prefix asdf)/asdf.sh
+chmod 700 /opt/homebrew/bin/asdf
 
 echo "Change the default shell to Zsh..."
 chsh -s /bin/zsh
@@ -39,7 +39,7 @@ echo "Installing bash-my-aws"
 git clone https://github.com/realestate-com-au/bash-my-aws.git ~/.bash-my-aws
 
 echo "Install iTerm fonts"
-brew tap homebrew/cask-fonts && brew cask install homebrew/cask-fonts/font-source-code-pro
+brew install --cask font-source-code-pro
 
 echo
 echo "If you like what you see in system/osx-settings, run ./system/osx-settings"
