@@ -1,9 +1,3 @@
-# Cask: install binaries
-tap 'homebrew/cask-versions'
-
-# The recommended way to use Heroku
-# brew 'heroku-toolbelt'
-
 # zsh
 brew 'zsh'
 # autojump for zsh plugins
@@ -71,8 +65,6 @@ cask 'aws-vault'
 brew 'tldr'
 # ngrok
 #cask 'ngrock'
-# exa - a better ls
-brew 'exa'
 # bat - a better cat
 brew 'bat'
 # grc - a slick tool for colorizing log output
