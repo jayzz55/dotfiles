@@ -127,7 +127,7 @@ function idp {
 }
 
 # replace standard ls with exa (https://the.exa.website/)
-alias ls="exa"
+alias ls="eza"
 # replace standard cat with bat (https://github.com/sharkdp/bat)
 alias cat="bat"
 

@@ -65,6 +65,8 @@ cask 'aws-vault'
 brew 'tldr'
 # ngrok
 #cask 'ngrock'
+# eza - a better ls
+brew 'eza'
 # bat - a better cat
 brew 'bat'
 # grc - a slick tool for colorizing log output
